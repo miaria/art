@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Title:</b>
+  <%= @artwork.title %>
+</p>
+
+<p>
+  <b>Artworkimage:</b>
+ <%= image_tag(@movie.poster, :size => "30x30") %>
+</p>
+
+<p>
+  <b>Age:</b>
+  <%= @artwork.age %>
+</p>
+
+<p>
+  <b>Artist:</b>
+  <%= @artwork.artist.number %>
+</p>
+
+<p>
+  <b>Price:</b>
+  <%= @artwork.price %>
+</p>
+
+<p>
+  <b>Type1:</b>
+  <%= @artwork.name %>
+</p>
+
+
+<%= link_to 'Edit', edit_artwork_path(@artwork) %> |
+<%= link_to 'Back', artworks_path %>

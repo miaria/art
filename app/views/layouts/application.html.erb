@@ -1,0 +1,54 @@
+  <!DOCTYPE html>
+  <html>
+  
+  <head>
+  <title>Maria's Artwork,The Art Gallery</title>
+  <%= stylesheet_link_tag  "http://ajax.googleapis.com/ajax/libs/jqueryui/1.7.2/themes/redmond/jquery-ui.css",  "application", :media => "all" %>
+   <%= javascript_include_tag "http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js", "http://ajax.googleapis.com/ajax/libs/jqueryui/1.8.1/jquery-ui.min.js", "application" %>
+   <%= csrf_meta_tags %>
+   
+   </head>
+	<body>
+    <div id="banner">
+    <%= image_tag("art.jpg", :size => "200x100") %>
+	<%= @page_title || " Art" %>
+    </div>
+  
+	
+	  <div id="nav">
+    <ul>
+  
+	<% if !signed_in? %>
+		<li><%= link_to "Sign In", signin_path %></li>		
+	<% else %>
+		<li>Signed in as <%= @current_user.name %></li>
+		<li><%= link_to "Sign Out", signout_path %></li>
+
+	<%end %>
+	
+		<li><%= link_to "Art News", 'http://www.templebargallery.com/?gclid=CKrqm4jUjroCFUlj2wodCiMAoA' %></li>
+		<li><%= mail_to "maria.white@mydit.ie", "Contact us" %></li>	
+		<li><%= link_to "Browse for Artists", artists_path%></li>
+		<li><%= link_to "Artworks", artworks_path%></li>
+		<li><%= link_to "posts", posts_path%></li>
+		<li><%= link_to "Enter Your Details here", users_path%></li>
+		 <input type="Button"onClick="window.print()"value="Print"/>
+		 <button type ="Reset"value="Reset">Reset</button>
+		<li><%= link_to "Home", 'http://localhost:3000/' %></li>
+	  </div>
+<br \>
+
+<div id="background-image">
+    <%= image_tag("artbrush.jpg", :size => "500x100") %>
+    </div>
+	<%= yield %>
+
+ <h2><li><%= link_to "Sign In", 'http://localhost:3000/signin' %></li>
+ <p><li><%= link_to "New User?" "Sign Up Now!", 'http://localhost:3000/users/new' %></li>
+ 
+ 
+<div id="background-image">
+    <%= image_tag("paint.jpg", :size => "300x200", :position => "right bottom") %>
+    </div>
+
+

@@ -1,0 +1,34 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @user.name %>
+</p>
+
+<p>
+  <b>Email:</b>
+  <%= @user.email %>
+</p>
+
+<p>
+  <b>Number:</b>
+  <%= @user.number %>
+</p>
+
+<p>
+  <b>Address:</b>
+  <%= @user.address %>
+<%= image_tag "http://maps.google.com/maps/api/staticmap?center=#{@user.address},Ireland&zoom=16&size=400x300&sensor=false&markers=color:red|#{@user.address},ireland" %>
+﻿
+
+</p>
+
+<p>
+  <b>Favourite:</b>
+  <%= @user.favourite %>
+</p>
+
+
+
+<%= link_to 'Edit', edit_user_path(@user) %> |
+<%= link_to 'Back', users_path %>

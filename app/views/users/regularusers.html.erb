@@ -1,0 +1,16 @@
+<h1>Listing regular users - more then 3 posts</h1>
+
+<table>
+  <tr>
+    <th>name</th>
+    <th>Email</th>
+  </tr>
+
+	<% @rusers.each do |user| %>
+		<tr>
+			<td><%= user.name %></td>
+			<td><%= user.email %></td>
+
+		</tr>
+	<% end %>
+</table>

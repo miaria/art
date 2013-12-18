@@ -1,0 +1,35 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @artist.name %>
+</p>
+
+<p>
+  <b>Dob:</b>
+  <%= @artist.dob %>
+</p>
+
+<b>age:</b>
+  <%= @artist.age %>
+</p>
+<p>
+
+	#<b>artworks for this artist: </b> <br \>
+	#<% @artist.artworks.each do |m| %>
+	#<%= m.title %>
+	#<br \>
+	#<% end %>
+	
+</p>
+
+<%= link_to 'Edit', edit_artist_path(@artist) %> |
+<%= link_to 'Back', artists_path %>
+<p id="notice"><%= notice %></p>
+
+<p>
+
+	
+
+
+
